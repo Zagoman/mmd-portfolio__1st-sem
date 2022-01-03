@@ -1,0 +1,49 @@
+@import url("https://use.typekit.net/ajs6oyz.css");
+
+:root {
+  --clr_bg: #dde2d6;
+  --clr_pri: #00b0eb;
+  --clr_sec: #ffea00;
+  --clr_acc: #ff0d51;
+  --clr_txt: #000c30;
+
+  --sp_xxs: 0.5rem;
+  --sp_xs: 1rem;
+  --sp_sm: 2rem;
+  --sp_md: 4rem;
+  --sp_lg: 8rem;
+  --sp_xl: 16rem;
+  --sp_xxl: 32rem;
+
+  --fs_xs: 1.12em;
+  --fs_sm: 1.25em;
+  --fs_md: 1.87em;
+  --fs_lg: 4em;
+  --fs_xl: 6.5em;
+  --fs_xxl: 21.8em;
+
+  --ff_dis: neue-haas-grotesk-display, sans-serif;
+  --ff_txt: neue-haas-grotesk-text, sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--ff_txt);
+}
+/* ! Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--ff_dis);
+}
+/* !Layout */
+
+/* ! */
+/* ? Dekstop View */
+@media only screen and (min-width: 75em) {
+  body {
+  }
+}
+/* ? Tablet view */
+@media only screen and (min-width: 31em) {
+}
