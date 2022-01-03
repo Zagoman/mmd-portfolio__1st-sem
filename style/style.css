@@ -41,8 +41,6 @@ h3 {
 /* ! */
 /* ? Dekstop View */
 @media only screen and (min-width: 75em) {
-  body {
-  }
 }
 /* ? Tablet view */
 @media only screen and (min-width: 31em) {
