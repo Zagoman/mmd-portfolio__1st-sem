@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="grid">
+      <nav class="nav">
         <ul>
-          <li>About me</li>
-          <li>Contact</li>
-          <li>Portfolio</li>
+          <li><a href="">about me.</a></li>
+          <li><a href="">projects</a></li>
+          <li><a href="">contact</a></li>
         </ul>
       </nav>
       <h1 class="hero__header">Hi.</h1>
-      <p>Welcome to my portfolio, here you find my 1st semester projects</p>
+      <p class="hero__sub">
+        Welcome to my portfolio, here you find my 1st semester projects
+      </p>
       <!-- <p>KEA Multimedia Design, 1st Semester</p> -->
       <img
         src="./media/Untitled-1.png"
@@ -26,9 +28,9 @@
       />
     </header>
     <main>
-      <section>
-        <h1>the experience you should expect</h1>
-        <p>
+      <section class="exp grid">
+        <h2 class="exp__title">the experience you should expect</h2>
+        <p class="exp__body">
           This portfolio has the goal of showing my whole first semester
           experience, and along with that, it is to show how I came up with
           solutions to the assignments. You should expect to have a resumed
@@ -47,13 +49,40 @@
           experience.
         </p>
       </section>
-      <section>
-        <h2>check out my first semester projects</h2>
-        <a href="./portfolio.html">See Portfolio</a>
+      <section class="port grid">
+        <h2 class="port__title">check out my first semester projects</h2>
+        <div class="port__grid grid3">
+            <div>
+                <img src="" alt="">
+                <p>1.</p>
+                <div class="deco"></div>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>2.</p>
+                <div class="deco"></div>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>3.</p>
+                <div class="deco"></div>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>4.</p>
+                <div class="deco"></div>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>5.</p>
+                <div class="deco"></div>
+            </div>
+            </div>
+        </div>
       </section>
-      <section>
-        <h2>Get to know me a bit</h2>
-        <p>
+      <section class="about grid">
+        <h2 class="about__title">Get to know me a bit</h2>
+        <p class="about__body">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           debitis alias velit, nisi ab ad. Dolores dolorem, iste delectus libero
           facere in excepturi aut voluptatum commodi aperiam! Accusantium enim
@@ -64,20 +93,27 @@
         <a href="./about.html" class="btn"></a>
       </section>
     </main>
-    <footer>
+    <footer class="grid">
       <a href="" class="footer__logo"><img src="" alt="" /></a>
-      <nav class="footer__nav">
-        <a href="" class="footer__link">Lorem.</a
-        ><a href="" class="footer__link">Nisi.</a
-        ><a href="" class="footer__link">Aut.</a
-        ><a href="" class="footer__link">Ipsum.</a
-        ><a href="" class="footer__link">Unde.</a
-        ><a href="" class="footer__link">Laudantium.</a>
-      </nav>
+          <ul class="footer__links">
+              <li><a href="" class="footer__link">Home</a
+                ></li>
+              <li><a href="" class="footer__link">About</a
+                ></li>
+              <li><a href="" class="footer__link">Projects</a
+                ></li>
+          </ul>
+          <ul class="socials">
+              <li><a href="" class="footer__link">Instagram</a
+                ></li>
+              <li><a href="" class="footer__link">Linkedin</a
+                ></li>
+              <li><a href="" class="footer__link">Facebook</a></li>
+           </ul>
       <section class="footer__address">
-        <p>Lorem, ipsum dolor.</p>
-        <p>Labore, ad assumenda.</p>
-        <p>Similique, quas ullam.</p>
+        <p><a href="">luca116d@stud.kea.dk</a></p>
+        <p>KEA Multimedia Design</p>
+        <p>&copy; All rights reserved - 2022</p>
       </section>
     </footer>
   </body>
