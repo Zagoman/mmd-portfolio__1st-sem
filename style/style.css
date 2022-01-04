@@ -1,11 +1,9 @@
 @import url("https://use.typekit.net/ajs6oyz.css");
 
 :root {
-  --clr_bg: #dde2d6;
-  --clr_pri: #00b0eb;
-  --clr_sec: #ffea00;
-  --clr_acc: #ff0d51;
-  --clr_txt: #000c30;
+  --clr_pri: #000;
+  --clr_sec: #dde2d6;
+  --clr_acc: #38c3d2;
 
   --sp_xxs: 0.5rem;
   --sp_xs: 1rem;
@@ -25,19 +23,43 @@
   --ff_dis: neue-haas-grotesk-display, sans-serif;
   --ff_txt: neue-haas-grotesk-text, sans-serif;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 1rem;
   font-family: var(--ff_txt);
+  background-color: var(--clr_pri);
+  color: var(--clr_sec);
+  /* mix-blend-mode: darken; */
+}
+header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+}
+img {
+  max-width: 100%;
 }
 /* ! Typography */
 h1,
 h2,
 h3 {
   font-family: var(--ff_dis);
+  color: var(--clr_sec);
+}
+h1 {
+  font-size: var(--fs_xxl);
 }
 /* !Layout */
-
+.hero__img {
+  grid-column: -5/-1;
+}
+.hero__header {
+  grid-column: 1/7;
+}
 /* ! */
 /* ? Dekstop View */
 @media only screen and (min-width: 75em) {
