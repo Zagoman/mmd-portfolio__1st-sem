@@ -15,12 +15,12 @@
   --sp_xl: 16rem;
   --sp_xxl: 32rem;
 
-  --fs_xs: 1.12em;
+  --fs_xs: 1em;
   --fs_sm: 1.25em;
-  --fs_md: 1.87em;
-  --fs_lg: 4em;
-  --fs_xl: 6.5em;
-  --fs_xxl: 20em;
+  --fs_md: 2em;
+  --fs_lg: 3em;
+  --fs_xl: 5em;
+  --fs_xxl: 15em;
 
   --ff_dis: neue-haas-grotesk-display, sans-serif;
   --ff_txt: neue-haas-grotesk-text, sans-serif;
@@ -48,6 +48,7 @@ a {
   color: var(--clr_sec);
   text-decoration: none;
   transition: var(--transition);
+  font-weight: 500;
 }
 a:hover {
   color: var(--clr_pri);
@@ -67,10 +68,10 @@ h3 {
   line-height: 1;
 }
 h1 {
-  font-size: var(--fs_xl);
+  font-size: var(--fs_xxl);
 }
 h2 {
-  font-size: var(--fs_md);
+  font-size: var(--fs_lg);
 }
 /* !Layout */
 .nav {
@@ -129,10 +130,26 @@ header[class="grid"] {
   grid-column: 1/-2;
 }
 .about__body {
-  grid-column: 1/-2;
+  grid-column: 1/-1;
   margin-top: var(--sp_md);
 }
-/* ! */
+.footer__logo {
+  grid-column: 1/-1;
+  margin-inline: auto;
+  grid-row: 1/2;
+  /* background-color: var(--clr_pri); */
+}
+.footer__links,
+.socials,
+.footer__address {
+  grid-column: 1/-1;
+}
+
+/* ! Addons */
+.current {
+  color: var(--clr_pri);
+}
+
 /* ? Dekstop View */
 @media only screen and (min-width: 75em) {
 }
