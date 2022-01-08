@@ -59,6 +59,18 @@ ul {
 section {
   padding-block: var(--sp_md);
 }
+
+.footer__links {
+  padding: 0;
+  margin-top: var(--sp_sm);
+}
+.footer__links > ul > li {
+  margin-left: var(--sp_xs);
+  margin-top: var(--sp_xxs);
+}
+.footer__links > ul > li:first-child {
+  margin-top: var(--sp_xs);
+}
 /* ! Typography */
 h1,
 h2,
@@ -73,11 +85,38 @@ h1 {
 h2 {
   font-size: var(--fs_lg);
 }
+.nav__links {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: var(--clr_bg);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block: var(--sp_xl);
+}
+.footer__sec-title {
+  font-size: var(--fs_sm);
+}
 /* !Layout */
 .nav {
   grid-column-end: -1;
   grid-row: 1/2;
 }
+#nav__btn {
+  position: absolute;
+  right: var(--sp_sm);
+  top: var(--sp_xs);
+  z-index: 5;
+  padding: 1em 0 1em 1em;
+  width: 0.5em;
+  aspect-ratio: 1/0.8;
+  background-image: url(../media/Menu.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hero__img {
   position: absolute;
   mix-blend-mode: lighten;
@@ -146,10 +185,18 @@ header[class="grid"] {
 }
 
 /* ! Addons */
+.is--btn-x {
+  background-image: url(../media/basic-ux.png);
+}
 .current {
   color: var(--clr_pri);
 }
-
+.is--hidden {
+  display: none;
+}
+.is--overflow-hidden {
+  overflow: hidden;
+}
 /* ? Dekstop View */
 @media only screen and (min-width: 75em) {
 }
