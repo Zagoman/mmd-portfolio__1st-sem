@@ -19,8 +19,8 @@
   --fs_sm: 1.25em;
   --fs_md: 2em;
   --fs_lg: 3em;
-  --fs_xl: 5em;
-  --fs_xxl: 15em;
+  --fs_xl: clamp(2.25rem, 3.6vw + 1rem, 6.5rem);
+  --fs_xxl: clamp(7rem, 23vw + 1rem, 25rem);
 
   --ff_dis: neue-haas-grotesk-display, sans-serif;
   --ff_txt: neue-haas-grotesk-text, sans-serif;
@@ -71,6 +71,18 @@ section {
 .footer__links > ul > li:first-child {
   margin-top: var(--sp_xs);
 }
+.deco {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: 1;
+  background-color: var(--clr_acc);
+}
+.port__card {
+  width: 100%;
+  aspect-ratio: 1/0.8;
+  position: relative;
+}
+
 /* ! Typography */
 h1,
 h2,
@@ -83,7 +95,7 @@ h1 {
   font-size: var(--fs_xxl);
 }
 h2 {
-  font-size: var(--fs_lg);
+  font-size: var(--fs_xl);
 }
 .nav__links {
   position: fixed;
@@ -98,6 +110,14 @@ h2 {
 }
 .footer__sec-title {
   font-size: var(--fs_sm);
+}
+.port__card > p {
+  font-size: clamp(6rem, 20vw + 1rem, 14rem);
+  position: absolute;
+  inset: auto auto -0.2em 0;
+  z-index: 2;
+  font-weight: 700;
+  color: var(--clr_pri);
 }
 /* !Layout */
 .nav {
@@ -135,11 +155,13 @@ h2 {
   grid-row: 3/-1;
   font-weight: 500;
   text-align: right;
+  max-width: 25ch;
 }
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-inline: var(--sp_sm);
+  grid-gap: 1.4rem;
 }
 header[class="grid"] {
   grid-template-rows: auto 1fr auto;
@@ -157,7 +179,7 @@ header[class="grid"] {
 }
 .exp__body {
   grid-column: 1/-1;
-  margin-top: var(--sp_md);
+  margin-top: var(--sp_sm);
 }
 .port__grid {
   grid-column: 1/-1;
@@ -165,12 +187,17 @@ header[class="grid"] {
 .port__title {
   grid-column: 1/-2;
 }
+.port__sub {
+  margin-top: var(--sp_sm);
+  grid-column: 1/-1;
+  max-width: 55ch;
+}
 .about__title {
   grid-column: 1/-2;
 }
 .about__body {
   grid-column: 1/-1;
-  margin-top: var(--sp_md);
+  margin-top: var(--sp_sm);
 }
 .footer__logo {
   grid-column: 1/-1;
@@ -197,9 +224,135 @@ header[class="grid"] {
 .is--overflow-hidden {
   overflow: hidden;
 }
-/* ? Dekstop View */
-@media only screen and (min-width: 75em) {
-}
 /* ? Tablet view */
 @media only screen and (min-width: 31em) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  /* ! layout */
+  .hero__header {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    margin-top: var(--sp_lg);
+  }
+  .hero__sub {
+    grid-column: 2/-1;
+    text-align: left;
+  }
+  .hero__img {
+    width: 60%;
+    right: var(--sp_xs);
+    top: 25vh;
+  }
+  header[class="grid"] {
+    padding-bottom: var(--sp_lg);
+  }
+  .exp__title {
+    grid-column: 1/-1;
+    max-width: 12ch;
+  }
+  .exp__body {
+    grid-column: 1/-3;
+  }
+  .port__grid {
+    grid-column: 1/-3;
+  }
+  .port__title {
+    grid-column: 1/-1;
+    max-width: 12ch;
+  }
+  .port__sub {
+    grid-column: 1/-5;
+  }
+  .about__title {
+    grid-column: 1/-1;
+    max-width: 10ch;
+  }
+  .about__body {
+    grid-column: 1/-3;
+  }
+}
+/* ? Dekstop View */
+@media only screen and (min-width: 75em) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+    margin-inline: 0;
+  }
+  /* ! layout */
+  .hero__header {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    margin-top: var(--sp_xl);
+  }
+  .hero__sub {
+    grid-column: 4/-1;
+  }
+  .hero__img {
+    width: 40%;
+    right: var(--sp_lg);
+    top: 20vh;
+  }
+  header[class="grid"] {
+    grid-template-rows: auto auto 1fr;
+    padding-bottom: var(--sp_lg);
+  }
+  #nav__btn {
+    position: absolute;
+    right: var(--sp_sm);
+    top: var(--sp_xs);
+    z-index: 5;
+    padding: 1em 0 1em 1em;
+    width: 0.5em;
+    aspect-ratio: 1/0.8;
+    background-image: url(../media/Menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: hidden;
+  }
+  .nav__links {
+    position: absolute;
+    inset: 10vh 10vw auto auto;
+    background-color: transparent;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-block: 0;
+  }
+  .nav__links > li {
+    padding: 0.3em;
+  }
+  .exp__title {
+    grid-column: 2/6;
+    max-width: 12ch;
+  }
+  .exp__body {
+    margin-top: var(--sp_lg);
+    grid-column: 6/-2;
+  }
+  .port__grid {
+    grid-column: 6/-1;
+    grid-row: 1/4;
+  }
+  .port__title {
+    grid-column: 2/6;
+    grid-row: 1/2;
+    max-width: 12ch;
+  }
+  .port__sub {
+    grid-column: 2/6;
+    grid-row: 2/3;
+    align-self: start;
+  }
+  .port__card {
+    aspect-ratio: 1/0.6;
+    position: relative;
+  }
+  .deco {
+    transition: var(--transition);
+  }
+  .port__card:hover > .deco {
+    opacity: 0.5;
+  }
 }
