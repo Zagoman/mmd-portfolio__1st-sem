@@ -113,6 +113,7 @@ h2 + h3 {
   /* margin-top: var(--sp_lg); */
   box-sizing: border-box;
   transition: 0.2s linear;
+  align-self: baseline;
 }
 .btn:hover {
   opacity: 0.8;
@@ -193,6 +194,12 @@ figcaption {
 .nav {
   grid-column-end: -1;
   grid-row: 1/2;
+}
+.nav-logo {
+  position: absolute;
+  left: var(--sp_sm);
+  top: var(--sp_xs);
+  max-width: 40px;
 }
 #nav__btn {
   position: absolute;
@@ -278,7 +285,7 @@ header[class="grid"] {
   grid-column: 1/-1;
   margin-inline: auto;
   grid-row: 1/2;
-  background-color: var(--clr_acc);
+  /* background-color: var(--clr_acc); */
   width: 6rem;
   aspect-ratio: 1/1;
 }
@@ -493,6 +500,11 @@ article {
     grid-template-rows: auto auto 1fr;
     padding-bottom: var(--sp_lg);
   }
+  .nav-logo {
+    left: 5vw;
+    top: 10vh;
+    max-width: 50px;
+  }
   #nav__btn {
     position: absolute;
     right: var(--sp_sm);
@@ -627,5 +639,9 @@ article {
     grid-column: 2/6;
     justify-self: left;
     align-self: baseline;
+  }
+  p + .btn {
+    margin-top: var(--sp_md);
+    display: inline-block;
   }
 }
