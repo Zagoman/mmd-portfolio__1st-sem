@@ -84,11 +84,18 @@ footer {
   inset: 0 0 0 0;
   z-index: 1;
   background-color: var(--clr_acc);
+  mix-blend-mode: screen;
 }
 .port__card {
   width: 100%;
   aspect-ratio: 1/0.8;
   position: relative;
+}
+.port__card-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: right;
 }
 p + h3 {
   margin-top: var(--sp_sm);
@@ -564,7 +571,7 @@ article {
   }
   .hero__header.is--2 {
     grid-column: 2/6;
-    margin-top: var(--sp_lg);
+    margin-top: var(--sp_xl);
   }
   .art__section {
     display: grid;
