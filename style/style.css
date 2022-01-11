@@ -145,6 +145,7 @@ h4 {
 }
 p {
   font-size: 1em;
+  line-height: 1.25;
   margin-bottom: var(--sp_xxs);
   max-width: 60ch;
 }
