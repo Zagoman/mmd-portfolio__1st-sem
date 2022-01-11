@@ -117,7 +117,11 @@ h2 + h3 {
   display: flex;
   justify-content: center;
 }
-
+figure {
+  margin-inline: auto;
+  width: 80%;
+  margin-bottom: var(--sp_xs);
+}
 /* ! Typography */
 h1,
 h2,
@@ -173,6 +177,10 @@ p {
 }
 .hero__header.is--2 {
   font-size: clamp(5rem, 10vw + 1rem, 14rem);
+}
+figcaption {
+  font-size: 1em;
+  font-weight: 500;
 }
 /* !Layout */
 .nav {
@@ -316,6 +324,18 @@ article {
 .is--overflow-hidden {
   overflow: hidden;
 }
+.skills {
+  grid-column: 1/-1;
+}
+.tag {
+  background-color: #38c3d27c;
+  padding: 0.5em 1em;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp_xxs);
+}
 
 /* ? Tablet view */
 @media only screen and (min-width: 31em) {
@@ -335,6 +355,9 @@ article {
   }
   section {
     padding-block: var(--sp_md);
+  }
+  .tags {
+    width: 60%;
   }
   /* ! layout */
   article {
@@ -546,6 +569,7 @@ article {
   .art__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: var(--sp_xs);
   }
   .art__p,
   .art__h2,
@@ -555,6 +579,10 @@ article {
   }
   .art__fig {
     grid-column: 2/-1;
+    grid-row: 1/9;
+  }
+  .grid-content {
+    column-span: 1;
   }
   .skills {
     grid-column: 2/-2;
