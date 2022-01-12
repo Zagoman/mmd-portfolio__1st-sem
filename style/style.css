@@ -323,6 +323,10 @@ article {
   grid-column: 1/-1;
   grid-row: 3/4;
 }
+.cv {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
 /* !!!!!!!!!!!!!!!
  !!! Addons 
  !!!!!!!!!! */
@@ -465,6 +469,10 @@ article {
   .sec > img {
     grid-column: 3/-1;
     grid-row: 1/4;
+  }
+  .cv {
+    grid-row: 2/3;
+    grid-column: 1/-1;
   }
 }
 /* ? Dekstop View */
@@ -643,5 +651,9 @@ article {
   p + .btn {
     margin-top: var(--sp_md);
     display: inline-block;
+  }
+  .cv {
+    grid-row: 2/3;
+    grid-column: 2/-1;
   }
 }
